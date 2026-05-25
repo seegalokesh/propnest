@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: propnest-api
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DB_PATH
+        value: /var/data/propnest.db
+      - key: FRONTEND_URL
+        value: https://propnest.vercel.app
+    disk:
+      name: propnest-db
+      mountPath: /var/data
+      sizeGB: 1
