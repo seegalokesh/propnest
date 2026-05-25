@@ -212,3 +212,8 @@ propnest/
 ## 📄 License
 
 MIT — free to use, modify and distribute.
+
+---
+##git add .
+##git commit -m "fix: remove sqlite3, use better-sqlite3"
+##git push
