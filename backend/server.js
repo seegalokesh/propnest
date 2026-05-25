@@ -12,7 +12,7 @@ runMigrations();
 
 // Middleware
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'https://propnest-nu.vercel.app/',
+  origin: process.env.FRONTEND_URL || 'https://localhost:5000',
   credentials: true
 }));
 app.use(express.json());
